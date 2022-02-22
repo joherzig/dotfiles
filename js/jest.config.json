@@ -1,0 +1,26 @@
+{
+  "testRegex": "(\\.spec)\\.js?$",
+  "testPathIgnorePatterns": ["/legacy/"],
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js", "<rootDir>/jest-matchers"],
+  "testURL": "http://localhost/",
+  "testTimeout": 20000,
+  "modulePaths": ["<rootDir>/src/images"],
+  "reporters": [
+    "default",
+    ["jest-junit", { "suiteName": "Test", "outputDirectory": ".", "outputName": "test.xml" }]
+  ],
+  "moduleNameMapper": {
+    "\\.(svg)$": "<rootDir>/src/tests/mocks/fileMock.js",
+    "^Components(.*)$": "<rootDir>/src/components$1",
+    "^Utils(.*)$": "<rootDir>/src/utils$1",
+    "^Store(.*)$": "<rootDir>/src/store$1",
+    "^Constants(.*)$": "<rootDir>/src/constants$1",
+    "^Translations(.*)$": "<rootDir>/src/translations$1",
+    "^Images(.*)$": "<rootDir>/src/images$1",
+    "^Router(.*)$": "<rootDir>/src/router$1",
+    "^Middleware(.*)$": "<rootDir>/src/middleware$1",
+    "^Src(.*)$": "<rootDir>/src$1",
+    "^Tests(.*)$": "<rootDir>/src/tests$1",
+    "\\.(css|less|scss|svg)$": "identity-obj-proxy"
+  }
+}

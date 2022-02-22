@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "paths": {
+      "Components/*": ["src/components/*"],
+      "Utils/*": ["src/utils/*"],
+      "Store/*": ["src/store/*"],
+      "Constants/*": ["src/constants/*"],
+      "Translations/*": ["src/translations/*"],
+      "Images/*": ["src/images/*"],
+      "Router/*": ["src/router/*"],
+      "Middleware/*": ["src/middleware/*"],
+      "Src/*": ["src/*"],
+      "Tests/*": ["src/tests/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
