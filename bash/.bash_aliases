@@ -3,10 +3,11 @@ alias la='ls -larth'
 alias treel='tree -L 2'
 
 #repositories
-alias dotfiles='cd ~/repositories/dotfiles'
+alias fe='cd ~/repositories/frontend'
 
-#ssh
+#development
 alias sshmyserver='sshpass -p $(pass server/ssh) ssh myuser@myserver.com'
+alias nr='npm run'
 
 #misc
 alias vf='nvim $(fzf)'
@@ -21,4 +22,3 @@ function lazygit() {
    git commit -m "$message"
    git push origin "$push_branch"
 }
-
