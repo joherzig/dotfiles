@@ -35,7 +35,7 @@ call plug#begin()
   " CoC
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Others
-  Plug '9mm/vim-closer'
+  Plug 'rstacruz/vim-closer'
 call plug#end()
 
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
