@@ -9,6 +9,9 @@ alias fe='cd ~/repositories/frontend'
 alias sshmyserver='sshpass -p $(pass server/ssh) ssh myuser@myserver.com'
 alias nr='npm run'
 
+#git
+alias gp='git pull'
+
 #misc
 alias vf='nvim $(fzf)'
 alias vim=nvim
@@ -21,4 +24,9 @@ function lazygit() {
    git add --all
    git commit -m "$message"
    git push origin "$push_branch"
+}
+
+function rename() {
+  for file in *; do mv "$file" "$(echo "$file" | sed s/"$1"/"$2"/)"; done
+  echo "Replaced "$1" with "$2" in all files"
 }
