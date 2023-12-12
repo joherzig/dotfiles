@@ -121,7 +121,10 @@ EDITOR=vim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# start terminal with tmux by default
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [ -z "$TMUX" ]; then
-  exec tmux
+# git autocomplete
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
+
+# node install path for n
+export N_PREFIX=/opt/homebrew
