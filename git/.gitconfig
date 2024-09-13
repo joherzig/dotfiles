@@ -1,6 +1,3 @@
-[user]
-	name = 
-	email = 
 [merge]
 	ff = false
 [fetch]
@@ -12,8 +9,7 @@
 	cleanup = "!f() { git branch -D $(git branch -vv | grep ': gone]' | awk '{print $1}'); }; f"
 	pushu = "!f() { git push --no-verify -u origin $(git branch --show-current); }; f"
   pullall = !find . -type d -depth 1 -exec echo {} "\\;" -exec git --git-dir={}/.git --work-tree=$PWD/{} pull "\\;"
-  developall = !find . -type d -depth 1 -exec echo {} "\\;" -exec git --git-dir={}/.git --work-tree=$PWD/{} checkout develop "\\;"
-  mainall = !find . -type d -depth 1 -exec echo {} "\\;" -exec git --git-dir={}/.git --work-tree=$PWD/{} checkout main "\\;"
+  checkoutall = "!f() { for sub in *; do git --git-dir=$sub/.git --work-tree=$PWD/$sub checkout $1; done }; f"
 [difftool]
   prompt = true
 [diff]
