@@ -1,0 +1,5 @@
+[user]
+  name="John Doe Work"
+  email="john.doe@work.com"
+[core]
+  sshCommand = ssh -i ~/.shh/work
